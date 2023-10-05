@@ -1,0 +1,33 @@
+extends ./layouts/main.jade
+
+block title
+  title Main page | seller
+
+block content
+
+  .container-fluid
+    
+    hr.i-size-L
+    hr.i-size-L
+    hr.i-size-L
+    
+    h1 Seller
+    
+    h2 Страницы
+    ul
+      li
+        a( href="/headers/rs/" ) Шапка Rusocks
+      li
+        a( href="/catalog/" ) Каталог
+      li
+        a( href="/catalog/detail/" ) Каталог детальная страница (старый компонент, старая галерея)
+      li
+        a( href="/catalog/detail-simple-gallery/" ) Каталог детальная страница (старый компонент с новой галереей (simple-gallery))
+      li
+        a( href="/catalog/detail-new/" ) Каталог детальная страница (новый компонент, старая галерея)
+      li
+        a( href="/catalog/detail-new-simple-gallery/" ) Каталог детальная страница (новый компонент с новой галереей (simple-gallery))
+
+    ul
+      li
+        a( href="/catalog/detail-simple-gallery-bazioni/" ) Каталог детальная страница (старый компонент с новой галереей (simple-gallery) дизайн Bazioni)

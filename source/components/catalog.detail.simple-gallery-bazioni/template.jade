@@ -1,0 +1,207 @@
+﻿// start /components/catalog.detail.simple-gallery-bazioni/
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+
+link( rel="stylesheet", href="/components/catalog.detail.simple-gallery-bazioni/style.css" )
+script( src="/components/catalog.detail.simple-gallery-bazioni/script.js" )
+
+.b-catalog-detail
+
+  .b-catalog-detail__go-back( style="background-image: url('/template/images/go-back.svg');" )
+
+  .b-statistics-data( data-url="/components/catalog.detail/statistics.html" data-method="GET" data-data="ID=4&SESSION_ID=5" )
+
+  hr.i-size-M
+
+  .b-catalog-detail__ill
+
+    .row
+
+      .col-md-8.col-sm-12.b-catalog-detail__animation-left
+
+        include ../../modules/gallery/fotorama
+        include ../../modules/gallery/swiper
+
+        .b-catalog-detail__gallery-big.swiper
+          .b-catalog-detail__gallery-big__close
+          .swiper-wrapper
+          .swiper-button-next
+          .swiper-button-prev
+
+        .b-catalog-detail__gallery-simple
+          .b-catalog-detail__gallery-simple-wrapper
+          .b-catalog-detail__gallery-simple-pagination
+
+      #slide-size-table.side-nav
+
+        .side-nav__close
+
+        include sizes
+
+      .col-md-4.col-sm-12.b-catalog-detail__animation-right
+
+        h1 3023 M NIGHT NAVY L/ Плащ мужской (утепленный)
+
+        hr.i-size-M.visible-xs
+
+        .b-catalog-detail__price-block
+
+          .b-catalog-detail__price 3 443 <sup>&#8381;</sup>
+
+          .b-catalog-detail__price-info
+
+            .b-catalog-detail__old-price
+              span Старая цена
+              s 12 000 руб.
+
+            .b-catalog-detail__benefit
+              span Ваша выгода
+              | 7 000 руб.
+
+        #propListBlock
+
+        hr.i-size-M
+
+        .row.b-catalog-detail__subscribe-block.hidden
+
+          form( action="/components/catalog.detail/subscribe.json" method="GET" )
+
+            .form-group
+
+              input#tpid( type="hidden" name="TPID" value="" )
+
+              label Email
+
+              input.form-control( type="email" value="" name="EMAIL" required )
+
+            .form-button
+
+              button.btn.btn-default.btn-size-M( stype="submit" ) Подписаться
+
+              
+
+          .b-message.hidden
+
+            span Вы успешно подписались!
+
+        .b-catalog-detail__button-block
+
+          a.btn.btn-default.btn-size-L.btn-100( href="/personal/cart/" data-ajax-url="/components/catalog.detail/buy.json" )
+
+            span.i-show Добавить в корзину
+
+            span Уже есть в корзине           
+
+            include ../../modules/ecommerce/catalog-detail
+
+        hr.i-size-M
+
+        .b-catalog-detail__properties
+
+          p Пальто мужское утепленное, центральная застежка на 5 пуговиц, воротник стойка с отстегивающимся трикотажным отложным воротником. Полочка и спинка с отрезными кокетками. На полочках - два боковых кармана с листочками. Спинка со шлицей в среднем шве. Рукав втачной двухшовный с отрезной нижней частью украшенной пуговицей. BAZIONI. На подкладке два внутренних кармана на молнии
+
+          hr
+
+          p
+            b Артикул:
+            | 
+            | 2043У M TERLANO NAVY CHEK LUX
+            
+          p
+            b Модель:
+            | 
+            | Classic fit
+            
+          p
+            b Сезон:
+            | 
+            | демисезон
+            
+          p
+            b Цвет ткани:
+            | 
+            | синий
+            
+          p
+            b Торговая марка:
+            | 
+            | BAZIONI
+          
+          p
+            b Состав:
+            | 
+            | Ткань верха: 100% шерсть. Подкладка: 50% вискоза, 50% полиэстер
+            
+          p
+            b Состав:
+            | 
+            | шерсть
+            
+          p
+            b Деление Цвета:
+            | 
+            | ТЕМНЫЙ
+            
+          p
+            b Утеплитель:
+            | 
+            | термоплюс 100 гр.
+
+  #oneClick.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+
+    .modal-dialog(role='document')
+
+      .modal-content
+
+        .modal-header
+
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+
+          h2#myModalLabel.modal-title.text-center Купить 1 клик
+
+  div( itemscope='', itemtype='http://schema.org/Product', style='display: none' )
+
+    div( itemprop='name' ) Верблюжье пальто
+
+    img( itemprop='image', src='upload/catalog.detail/1.jpg', alt="Верблюжье пальто" )
+
+    div( itemprop='offers', itemscope='', itemtype='http://schema.org/Offer' )
+
+      span( itemprop='priceCurrency', content='RUB' ) RUB
+
+      span( itemprop='price' ) 5000
+
+    div( itemprop='description' ) Элегантное, слегка укороченное однобортное пальто из верблюжьей шерсти натурального цвета. Натуральные экологичные материалы, классическая модель, идеально сочетающаяся со строгим офисным стилем и деловым casual.
+
+  hr.i-size-L
+
+  hr.i-size-L
+
+  include ../../modules/advs/include
+
+  hr
+
+  include ../../modules/tabs/include
+
+#catalogDetailVideo
+
+  div Video
+  //-div( data-thumb="/upload/play.png" )
+    iframe( width="100%" height="360" src="https://www.youtube.com/embed/_h7-0gCc_Hw" frameborder="0" allowfullscreen )  
+#catalogDetailData( data-prop-list="[{\"type\":\"list\",\"code\":\"size\",\"name\":\"Размер\"}]" data-category="Верхняя одежда" data-brand="Bazioni" )
+
+
+
+  div( data-id="tp1" data-price='3 443 <sup>&#8381;</sup>', data-discount-diff='400 <sup>&#8381;</sup>', data-discount-percent="10%" data-old-price='4 200 <sup>&#8381;</sup>', data-photo='/upload/catalog.detail/simple-gallery/1.jpg;/upload/catalog.detail/simple-gallery/2.jpg;/upload/catalog.detail/simple-gallery/3.jpg;/upload/catalog.detail/simple-gallery/1.jpg' data-big-photo='/upload/catalog.detail/simple-gallery/1.jpg;/upload/catalog.detail/simple-gallery/2.jpg;/upload/catalog.detail/simple-gallery/3.jpg;/upload/catalog.detail/simple-gallery/1.jpg' data-available="Y" data-list-size="50/176" data-cur="RUB", data-title="3023 M NIGHT NAVY L/ Плащ мужской (утепленный) 50/176" )
+
+  div( data-id="tp2" data-price='2 443 <sup>&#8381;</sup>', data-photo='/upload/catalog.detail/4.jpg;/upload/catalog.detail/5.jpg;/upload/catalog.detail/6.jpg' data-big-photo='/upload/catalog.detail/4.jpg;/upload/catalog.detail/5.jpg;/upload/catalog.detail/6.jpg' data-available="Y" data-list-size="50/182" data-cur="RUB", data-title="3023 M NIGHT NAVY L/ Плащ мужской (утепленный) 50/182" )
+
+  div( data-id="tp3" data-price='4 443 <sup>&#8381;</sup>', data-photo='/upload/catalog.detail/10.jpg;/upload/catalog.detail/11.jpg;/upload/catalog.detail/12.jpg' data-big-photo='/upload/catalog.detail/10.jpg;/upload/catalog.detail/11.jpg;/upload/catalog.detail/12.jpg' data-available="Y" data-list-size="52/176" data-cur="RUB", data-title="3023 M NIGHT NAVY L/ Плащ мужской (утепленный) 52/176" )
+
+  div( data-id="tp4" data-price='5 443 <sup>&#8381;</sup>', data-photo='/upload/catalog.detail/13.jpg;/upload/catalog.detail/14.jpg;/upload/catalog.detail/15.jpg' data-big-photo='/upload/catalog.detail/13.jpg;/upload/catalog.detail/14.jpg;/upload/catalog.detail/15.jpg' data-available="Y" data-list-size="52/182" data-cur="RUB", data-title="3023 M NIGHT NAVY L/ Плащ мужской (утепленный) 52/182" )
+
+  div( data-id="tp5" data-price='6 443 <sup>&#8381;</sup>', data-photo='/upload/catalog.detail/13.jpg;/upload/catalog.detail/14.jpg;/upload/catalog.detail/15.jpg' data-big-photo='/upload/catalog.detail/13.jpg;/upload/catalog.detail/14.jpg;/upload/catalog.detail/15.jpg' data-available="Y" data-list-size="54/176" data-cur="RUB", data-title="3023 M NIGHT NAVY L/ Плащ мужской (утепленный) 54/176" ) 
+
+// end /components/catalog.detail.simple-gallery-bazioni/

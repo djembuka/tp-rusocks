@@ -1,0 +1,24 @@
+﻿#buyCatalogElementPopup
+  #buyCatalogElementPopupOpaco
+  #buyCatalogElementPopupWindow
+    .b-catalog-element-popup__body
+      p
+        b Товар добавлен в <a href="">корзину</a>
+
+      p#buyCatalogElementPopupEmpty Минимальная сумма заказа <span id="buyCatalogElementPopupMin"></span> ₽, вам необходимо добавить на сумму <span id="buyCatalogElementPopupLeft"></span> ₽.
+
+      p#buyCatalogElementPopupFull В корзине товаров на <span id="buyCatalogElementPopupOrder"></span> ₽.
+
+    .b-catalog-element-popup__footer 
+      a.btn.btn-default( href="" ) Перейти в корзину
+      a.btn.btn-default.b-catalog-element-popup__close( href="" ) Продолжить
+
+
+#subscribeModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='subscribeLabel')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+      
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h2#subscribeLabel.modal-title.text-center Подписаться
